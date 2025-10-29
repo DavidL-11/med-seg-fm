@@ -1,0 +1,23 @@
+[project]
+name = "SegFM"
+version = "0.1"
+authors = [
+  { name="David Lurz", email="david.lurz@fau.de" },
+]
+description = "Comparison of segmentation foundation models for medical imaging"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Linux",
+]
+
+[project.urls]
+Homepage = "https://github.com/DavidL-11/segFM"
+Issues = "https://github.com/DavidL-11/segFM/issues"
+
+[build-system]
+requires = [
+    "setuptools==70.2.0"
+    ]
+build-backend = "setuptools.build_meta"

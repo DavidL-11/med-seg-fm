@@ -1,0 +1,21 @@
+[submodule "src/segFM/BOB/src/BOB/train/dfine/model"]
+	path = src/segFM/BOB/src/BOB/train/dfine/model
+	url = git@github.com:Peterande/D-FINE.git
+[submodule "src/segFM/predictors/SAM_Med2D"]
+	path = src/segFM/predictors/SAM_Med2D
+	url = git@github.com:OpenGVLab/SAM-Med2D.git
+[submodule "src/segFM/predictors/SAMMed3D"]
+	path = src/segFM/predictors/SAMMed3D
+	url = git@github.com:uni-medical/SAM-Med3D.git
+[submodule "src/segFM/predictors/VISTA"]
+	path = src/segFM/predictors/VISTA
+	url = git@github.com:Project-MONAI/VISTA.github
+[submodule "src/segFM/predictors/MedSAM2"]
+	path = src/segFM/predictors/MedSAM2
+	url = git@github.com:bowang-lab/MedSAM2.git
+[submodule "src/segFM/predictors/surface-distance"]
+	path = src/segFM/predictors/surface-distance
+	url = git@github.com:google-deepmind/surface-distance.git
+[submodule "src/segFM/predictors/sam2"]
+	path = src/segFM/predictors/sam2
+	url = git@github.com:facebookresearch/sam2.git
