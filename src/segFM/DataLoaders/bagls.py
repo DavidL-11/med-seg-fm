@@ -8,7 +8,7 @@ from segFM.DataLoaders.base_dataset import BaseImageDataset
 from segFM import prompts
 from segFM import color_classes
 from segFM.logger import logger
-from segFM.BOB.src.BOB.prompt_generator import BOB
+from BOB import BOB
 
 from collections import defaultdict
 

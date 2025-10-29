@@ -5,7 +5,7 @@ from collections import defaultdict
 
 from segFM.DataLoaders.base_dataset import BaseImageDataset
 from segFM import utils, prompts
-from segFM.BOB.src.BOB.prompt_generator import BOB
+from BOB import BOB
 
 class BratsMSDGlioma(BaseImageDataset):
     """

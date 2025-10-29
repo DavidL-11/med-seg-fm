@@ -1,17 +1,13 @@
 ## Foundation Models in Medical Image Segmentation
 This repository contains the code for the bachelor's thesis "Foundation Models in Medical Image Segmentation".  
-The goal is to evaluate the performance of different foundation models on many different, especially medical, datasets and compare them to each other and to fully supervised models trained specifically for a certain dataset.  
-Additionally, a prompt generator is created that generates box prompts for the foundation models for 2D and 3D images.
-
-A napari extension that allows the user to interactively generate, visualize and edit prompts as well as
-segment the image using the prompts is also provided. For more information, please refer to the README in the `src/segFM/BOB/` folder.
+The goal is to evaluate the performance of different foundation models on many different, especially medical, datasets and compare them to each other and to fully supervised models trained specifically for a certain dataset.
 
 
 ### Installation
 For ease of use, a Makefile is included that creates virtual environments and installs the required packages.
 
 ```bash
-make [all|BOB|train]
+make [all|train]
 ```
 
 Of course, you can also manually pull all submodules, install dependencies and download the models if you prefer that.
@@ -21,11 +17,6 @@ You can do this by running `chmod +x download.sh` in the respective folders.
 
 The `all` target creates both virtual environments, installs the dependencies and downloads the models.
 This target is used for evaluating the models on the datasets (segFM).
-
-If you only want to install the Bounding-box Oracle for Biomedicine (BOB) + its napari extension, you can use the `BOB` target.
-This requires a lot less dependencies and is a slimmer installation. The segFM package is not needed for BOB, only `src/segFM/BOB` is used.
-
-If you want to train YOLO or especially D-FINE-N, you additionally need to install the dependencies for training. The `train` target does this for you. Note that 'make all' does *not* include the training dependencies, and 'make train' does *not* create the virtual environments or download the models, so both targets need to be run.
 
 The makefile automatically detects if an NVIDIA GPU is available and tries to install PyTorch with CUDA12.8 support. If your GPU requires a different CUDA version, be sure to install the correct pytorch version that fits your device. You can find the correct command [here](https://pytorch.org/get-started/locally/).
 
@@ -39,7 +30,6 @@ The makefile automatically detects if an NVIDIA GPU is available and tries to in
 should contain a `eval.py` file that stores the results of the evaluation in a .csv file.
 - `src/segFM/DataLoaders/`: Contains the Datasets. Each file represents a dataset
 and contains a class that inherits from `base_dataset.py`. The class should implement the `__getitem__` and `__len__` methods.
-- `src/segFM/BOB/`: Contains the code for the Bounding-box Oracle for Biomedicine (BOB) and the associated napari extension.
 - `src/segFM/MedMaskGenerator/`: Contains code that provides the functionality of the SAM2AutomaticMaskGenerator for MedSAM2 or similar models. Was a dead end, but kept for reference.
 - `Datasets/`: Contains the datasets that are used in the project. Obviously, these are also not stored in the repository.
 

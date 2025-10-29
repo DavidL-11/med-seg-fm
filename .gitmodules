@@ -1,6 +1,3 @@
-[submodule "src/segFM/BOB/src/BOB/train/dfine/model"]
-	path = src/segFM/BOB/src/BOB/train/dfine/model
-	url = git@github.com:Peterande/D-FINE.git
 [submodule "src/segFM/predictors/SAM_Med2D"]
 	path = src/segFM/predictors/SAM_Med2D
 	url = git@github.com:OpenGVLab/SAM-Med2D.git

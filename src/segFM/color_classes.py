@@ -1,6 +1,6 @@
 """
 This file contains mappings between color codes, IDs, and labels for various segmentation datasets.
-This is needed to convert between Ground Truth Colors, Labels (for human readability) and IDs (for BOB Training).
+This is needed to convert between Ground Truth Colors, Labels (for human readability) and IDs.
 """
 
 bagls_color_to_id = {
