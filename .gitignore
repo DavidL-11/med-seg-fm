@@ -58,4 +58,3 @@ runs/*
 *.csv
 *.tex
 *.neopolyp
-src/segFM/predictors/
