@@ -94,12 +94,6 @@ The results are stored in the following format:
 
 ![](./assets/gb.png)
 
-#### NeoPolyp
-
-![](./assets/boxplot_neopolyp.svg)
-
-
-
 #### IMed361M
 
 ![](./assets/IMed361_IoU_distribution.svg)
