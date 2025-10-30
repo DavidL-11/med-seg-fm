@@ -67,3 +67,55 @@ The results are stored in the following format:
 - `DSC`: Dice Similarity Coefficient metric
 - `NSD`: Normalized Surface Dice metric
 - `IoU`: Intersection over Union metric
+
+#### BAGLS
+
+![](./assets/checkpoint_comparison.svg)
+
+![](./assets/Glottis_heatmap.svg)
+
+![](./assets/Vocal_Folds_heatmap.svg)
+
+![](./assets/bagls_box_size.svg)
+
+![](./assets/pointplacement.svg)
+
+#### VFSS
+
+![](./assets/vfss_performance_plot.svg)
+
+![](./assets/Pt3444_Visit1_fixed_004.mp4_SAM2.png)
+
+#### Endoscapes
+
+![](./assets/boxplot_endoscapes.svg)
+
+![](./assets/endoscapes_radar.svg)
+
+![](./assets/gb.png)
+
+#### NeoPolyp
+
+![](./assets/boxplot_neopolyp.svg)
+
+
+
+#### IMed361M
+
+![](./assets/IMed361_IoU_distribution.svg)
+
+
+#### MedSegBench
+
+![](./assets/MedSegBench_IoU_distribution.svg)
+
+#### FLARE22 
+
+![](./assets/barplot_FLARE22_IoU.svg)
+
+![](./assets/iou_by_time.svg)
+
+#### Medical Segmentation Decathlon
+
+![](./assets/barplot_MSD.svg)
+

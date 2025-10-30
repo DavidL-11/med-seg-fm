@@ -54,9 +54,7 @@ Images/
 runs/*
 /**/**old**
 *.pdf
-*.png
 *.jpg
-*.svg
 *.csv
 *.tex
 *.neopolyp
