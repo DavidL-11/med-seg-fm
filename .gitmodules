@@ -6,7 +6,7 @@
 	url = git@github.com:uni-medical/SAM-Med3D.git
 [submodule "src/segFM/predictors/VISTA"]
 	path = src/segFM/predictors/VISTA
-	url = git@github.com:Project-MONAI/VISTA.github
+	url = git@github.com:Project-MONAI/VISTA.git
 [submodule "src/segFM/predictors/MedSAM2"]
 	path = src/segFM/predictors/MedSAM2
 	url = git@github.com:bowang-lab/MedSAM2.git
