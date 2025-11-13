@@ -1,7 +1,5 @@
 ## Foundation Models in Medical Image Segmentation
-This repository contains the code for the bachelor's thesis "Foundation Models in Medical Image Segmentation".  
-The goal is to evaluate the performance of different foundation models on many different, especially medical, datasets and compare them to each other and to fully supervised models trained specifically for a certain dataset.
-
+The goal of this repository is to evaluate the performance of different foundation models on many different, especially medical, datasets and compare them to each other and to fully supervised models trained specifically for a certain dataset.
 
 ### Installation
 For ease of use, a Makefile is included that creates virtual environments and installs the required packages.
