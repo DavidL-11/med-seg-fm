@@ -113,3 +113,155 @@ The results are stored in the following format:
 
 ![](./assets/barplot_MSD.svg)
 
+## Training Data and Models
+The evaluated models are:
+
+- [SAM2.1](https://github.com/facebookresearch/sam2)
+- [MedSAM2](https://github.com/bowang-lab/MedSAM2)
+- [SAM-Med2D](https://github.com/OpenGVLab/SAM-Med2D)
+- [SAM-Med3D](https://github.com/uni-medical/SAM-Med3D)
+- [VISTA3D](https://github.com/Project-MONAI/VISTA)
+
+
+The training evaluation data was sourced from the following datasets and collections:
+
+- [BAGLS](https://www.bagls.org/)
+- [NeoPolyp](https://www.kaggle.com/c/bkai-igh-neopolyp/)
+- [Endoscapes](https://github.com/CAMMA-public/Endoscapes)
+- [Brain Electron Microscopy](https://www.epfl.ch/labs/cvlab/data/data-em/)
+- [IMed-361M](https://github.com/uni-medical/IMIS-Bench)
+- [MedSegBench](https://medsegbench.github.io/)
+- [FLARE22](https://flare22.grand-challenge.org/)
+- [AMOS22](https://amos22.grand-challenge.org/)
+- [ToothFairy3](https://ditto.ing.unimore.it/toothfairy3/)
+- [Medical Decathlon](http://medicaldecathlon.com/)
+
+
+The following list of citations contains publications related to our work:
+
+
+```BibTeX
+@misc{ravi_sam_2024,
+	title = {{SAM} 2: Segment Anything in Images and Videos},
+	doi = {10.48550/arXiv.2408.00714},
+	author = {Ravi, Nikhila and Gabeur, Valentin and Hu, Yuan-Ting and Hu, Ronghang and Ryali, Chaitanya and Ma, Tengyu and Khedr, Haitham and Rädle, Roman and Rolland, Chloe and Gustafson, Laura and Mintun, Eric and Pan, Junting and Alwala, Kalyan Vasudev and Carion, Nicolas and Wu, Chao-Yuan and Girshick, Ross and Dollár, Piotr and Feichtenhofer, Christoph},
+	date = {2024-10-28},
+}
+```
+```BibTeX
+@article{ma_segment_2024,
+    title = {Segment anything in medical images},
+    doi = {10.1038/s41467-024-44824-z},
+    journal = {Nature Communications},
+    author = {Ma, Jun and He, Yuting and Li, Feifei and Han, Lin and You, Chenyu and Wang, Bo},
+    year = {2024},
+}
+```
+```BibTex
+@misc{cheng_sam-med2d_2023,
+	title = {{SAM}-Med2D},
+	url = {http://arxiv.org/abs/2308.16184},
+	doi = {10.48550/arXiv.2308.16184},
+	author = {Cheng, Junlong and Ye, Jin and Deng, Zhongying and Chen, Jianpin and Li, Tianbin and Wang, Haoyu and Su, Yanzhou and Huang, Ziyan and Chen, Jilong and Jiang, Lei and Sun, Hui and He, Junjun and Zhang, Shaoting and Zhu, Min and Qiao, Yu},
+	date = {2023-08-30},
+}
+```
+```BibTex
+@misc{wang_sam-med3d_2024,
+	title = {{SAM}-Med3D: Towards General-purpose Segmentation Models for Volumetric Medical Images},
+	doi = {10.48550/arXiv.2310.15161},
+	shorttitle = {{SAM}-Med3D},
+	author = {Wang, Haoyu and Guo, Sizheng and Ye, Jin and Deng, Zhongying and Cheng, Junlong and Li, Tianbin and Chen, Jianpin and Su, Yanzhou and Huang, Ziyan and Shen, Yiqing and Fu, Bin and Zhang, Shaoting and He, Junjun and Qiao, Yu},
+	date = {2024-09-14},
+}
+```
+```BibTex
+@misc{he_vista3d_2024,
+	title = {{VISTA}3D: A Unified Segmentation Foundation Model For 3D Medical Imaging},
+	doi = {10.48550/arXiv.2406.05285},
+	author = {He, Yufan and Guo, Pengfei and Tang, Yucheng and Myronenko, Andriy and Nath, Vishwesh and Xu, Ziyue and Yang, Dong and Zhao, Can and Simon, Benjamin and Belue, Mason and Harmon, Stephanie and Turkbey, Baris and Xu, Daguang and Li, Wenqi},
+	date = {2024-11-22},
+}
+```
+```BibTeX
+@article{gomez_bagls_2020,
+	title = {{BAGLS}, a multihospital Benchmark for Automatic Glottis Segmentation},
+	doi = {10.1038/s41597-020-0526-3},
+	journaltitle = {Scientific Data},
+	author = {Gómez, Pablo and Kist, Andreas M. and Schlegel, Patrick and Berry, David A. and Chhetri, Dinesh K. and Dürr, Stephan and Echternach, Matthias and Johnson, Aaron M. and Kniesburges, Stefan and Kunduk, Melda and Maryn, Youri and Schützenberger, Anne and Verguts, Monique and Döllinger, Michael},
+}
+```
+```BibTeX
+@article{FLARE22-LDH2024,
+	title = {Unleashing the strengths of unlabelled data in deep learning-assisted pan-cancer abdominal organ quantification: the FLARE22 challenge},
+	author = {Jun Ma and Yao Zhang and Song Gu and Cheng Ge and Shihao Ma and Adamo Young and Cheng Zhu and Xin Yang and Kangkang Meng and Ziyan Huang and Fan Zhang and Yuanke Pan and Shoujin Huang and Jiacheng Wang and Mingze Sun and Rongguo Zhang and Dengqiang Jia and Jae Won Choi and Natália Alves and Bram {de Wilde} and Gregor Koehler and Haoran Lai and Ershuai Wang and Manuel Wiesenfarth and Qiongjie Zhu and Guoqiang Dong and Jian He and Junjun He and Hua Yang and Bingding Huang and Mengye Lyu and Yongkang Ma and Heng Guo and Weixin Xu and Klaus Maier-Hein and Yajun Wu and Bo Wang},
+	journal = {The Lancet Digital Health},
+	year = {2024},
+	doi = {https://doi.org/10.1016/S2589-7500(24)00154-7} 
+}
+```
+```BibTeX
+@article{ji2022amos,
+	title={AMOS: A Large-Scale Abdominal Multi-Organ Benchmark for Versatile Medical Image Segmentation},
+	author={Ji, Yuanfeng and Bai, Haotian and Yang, Jie and Ge, Chongjian and Zhu, Ye and Zhang, Ruimao and Li, Zhen and Zhang, Lingyan and Ma, Wanling and Wan, Xiang and others},
+	journal={arXiv preprint arXiv:2206.08023},
+	year={2022}
+}
+```
+```BibTeX
+@article{murali2023endoscapes,
+      title={The Endoscapes Dataset for Surgical Scene Segmentation, Object Detection, and Critical View of Safety Assessment: Official Splits and Benchmark}, 
+      author={Aditya Murali and Deepak Alapatt and Pietro Mascagni and Armine Vardazaryan and Alain Garcia and Nariaki Okamoto and Guido Costamagna and Didier Mutter and Jacques Marescaux and Bernard Dallemagne and Nicolas Padoy},
+      journal={arXiv preprint arXiv:2312.12429},
+      year={2023},
+}
+```
+```BibTeX
+@article{alapatt2021temporally,
+  title={Temporally Constrained Neural Networks (TCNN): A framework for semi-supervised video semantic segmentation},
+  author={Alapatt, Deepak and Mascagni, Pietro and Vardazaryan, Armine and Garcia, Alain and Okamoto, Nariaki and Mutter, Didier and Marescaux, Jacques and Costamagna, Guido and Dallemagne, Bernard and Padoy, Nicolas},
+  journal={arXiv preprint arXiv:2112.13815},
+  year={2021}
+}
+```
+```BibTeX
+@inproceedings{lucchi_learning_2013,
+	location = {Portland, {OR}, {USA}},
+	title = {Learning for Structured Prediction Using Approximate Subgradient Descent with Working Sets},
+	url = {http://ieeexplore.ieee.org/document/6619103/},
+	doi = {10.1109/cvpr.2013.259},
+	eventtitle = {2013 {IEEE} Conference on Computer Vision and Pattern Recognition ({CVPR})},
+	publisher = {{IEEE}},
+	author = {Lucchi, Aurelien and Li, Yunpeng and Fua, Pascal},
+	date = {2013-06},
+}
+```
+```BibTeX
+@article{Ku2024,
+	title = {MedSegBench: A comprehensive benchmark for medical image segmentation in diverse data modalities},
+	url = {http://dx.doi.org/10.1038/s41597-024-04159-2},
+	DOI = {10.1038/s41597-024-04159-2},
+	author = {Kuş,  Zeki and Aydin,  Musa},
+	year = {2024},
+}
+```
+```BibTeX
+@article{2024IEEEACCESS,
+	title={{Enhancing Patch-Based Learning for the Segmentation of the Mandibular Canal}},
+	doi={https://doi.org/10.1109/ACCESS.2024.3408629},
+	publisher={IEEE},
+	year={2024},
+	journal={IEEE Access},
+	author={Lumetti, Luca and Pipoli, Vittorio and Bolelli, Federico and Ficarra, Elisa and Grana, Costantino},
+}
+```
+```BibTeX
+@misc{jha_kvasir-seg_2019,
+    title = {Kvasir-{SEG}: {A} {Segmented} {Polyp} {Dataset}},
+    shorttitle = {Kvasir-{SEG}},
+    url = {http://arxiv.org/abs/1911.07069},
+    doi = {10.48550/arXiv.1911.07069},
+    author = {Jha, Debesh and Smedsrud, Pia H. and Riegler, Michael A. and Halvorsen, Pål and Lange, Thomas de and Johansen, Dag and Johansen, Håvard D.},
+    year = {2019},
+}
+```
