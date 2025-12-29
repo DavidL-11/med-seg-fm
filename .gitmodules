@@ -19,3 +19,6 @@
 [submodule "src/segFM/predictors/sam3"]
 	path = src/segFM/predictors/sam3
 	url = git@github.com:facebookresearch/sam3.git
+[submodule "src/segFM/predictors/nnInteractive"]
+	path = src/segFM/predictors/nnInteractive
+	url = git@github.com:MIC-DKFZ/nnInteractive.git
