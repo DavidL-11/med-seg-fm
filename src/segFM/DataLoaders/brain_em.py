@@ -20,8 +20,8 @@ class BrainMicroscopy(BaseImageDataset):
         self.prompt_finder = prompt_finder
         self.prompt_gen = bob
 
-        self.imgs_path = "Datasets/ElectronMicroscopy/images/"
-        self.labels_path = "Datasets/ElectronMicroscopy/masks/"
+        self.imgs_path = "/run/media/david/SSD1TB/Datasets/ElectronMicroscopy/images/"
+        self.labels_path = "/run/media/david/SSD1TB/Datasets/ElectronMicroscopy/masks/"
         self.img_list = self.get_img_list(self.imgs_path, ".tif")
         self.n_images = len(self.img_list)
 
@@ -80,7 +80,6 @@ class BrainMicroscopy(BaseImageDataset):
                 n_pos=self.n_pos,
                 n_neg=self.n_neg,
                 plot_prompts=self.plot_prompts,
-                prompt_gen=self.prompt_gen
             )
 
         img = utils.grayscale_to_rgb(img)

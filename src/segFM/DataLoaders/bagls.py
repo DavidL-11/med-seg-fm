@@ -1,14 +1,12 @@
 from PIL import Image
 import numpy as np
 import os
-from ultralytics import YOLO
 import random
 
 from segFM.DataLoaders.base_dataset import BaseImageDataset
 from segFM import prompts
 from segFM import color_classes
 from segFM.logger import logger
-from BOB import BOB
 
 from collections import defaultdict
 
@@ -29,7 +27,7 @@ class BAGLS_Images(BaseImageDataset):
         n_neg=0,
         bbsize=0,
         noisy=False,
-        prompt_gen:BOB=None,
+        prompt_gen=None,
     ):
         super(BAGLS_Images, self).__init__(transform=transform)
         self.n_images = 55250 if type == "training" else 3499
@@ -124,10 +122,10 @@ class BAGLSImagesFull(BaseImageDataset):
         n_neg=0,
         bbsize=0,
         noisy=False,
-        prompt_gen: BOB = None,
+        prompt_gen=None,
     ):
         super(BAGLSImagesFull, self).__init__(transform=transform)
-        self.path = "Datasets/BAGLS_full/"
+        self.path = "/run/media/david/SSD1TB/Datasets/BAGLS_full/"
         self.dataset_name = "BAGLSImagesFull"
         self.img_path = self.path + "images/"
         self.gt_path = self.path + "masks/"

@@ -2,7 +2,7 @@
 name = "SegFM"
 version = "0.1"
 authors = [
-  { name="TODO", email="anonymous" },
+  { name="David Lurz", email="david.lurz@fau.de" },
 ]
 description = "Comparison of segmentation foundation models for medical imaging"
 readme = "README.md"
@@ -17,3 +17,8 @@ requires = [
     "setuptools==70.2.0"
     ]
 build-backend = "setuptools.build_meta"
+
+[tool.uv.workspace]
+members = [
+    "test",
+]
