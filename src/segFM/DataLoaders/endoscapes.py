@@ -23,8 +23,8 @@ class EndoscapesDataset(BaseImageDataset):
     ):
         super(EndoscapesDataset, self).__init__(transform)
 
-        self.image_path = "/media/david/SHARED/endoscapes/all/"
-        self.mask_path = "/media/david/SHARED/endoscapes/semseg/"
+        self.image_path = "/media/david/SSD1TB/Datasets/endoscapes/all/"
+        self.mask_path = "/media/david/SSD1TB/Datasets/endoscapes/semseg/"
 
         self.bbsize = bbsize
         self.mode = mode

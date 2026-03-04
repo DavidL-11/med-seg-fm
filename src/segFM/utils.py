@@ -18,6 +18,63 @@ from surface_distance.metrics import (
 from surface_distance import metrics
 
 
+class Prompt(object):
+    """
+    A class to represent a prompt for a segmentation model.
+    The prompt can be a bounding box, a point, or both.
+    All points and boxes contained in this prompt represent the same object.
+    Every prompt can have max. one bounding box -> 1D-Array (Example: p.box = [x1, y1, x2, y2]).
+    Every prompt can have multiple point prompts -> 2D-Array (Example: p.point = [[x1, y1], [x2, y2], ...]).
+    Every point prompt has a label (1 for foreground, 0 for background) -> 1D-Array (Example: p.label = [1, 0, 1, ...]).
+    """
+
+    def __init__(
+        self,
+        box=None,
+        point=None,
+        label=None,
+        z=0,
+        confidence=1.0,
+        quality_score=1.0,
+        color=255,
+        channel=None,
+        class_label="",
+        class_id=None,
+        generated_by="",
+        obj_id=-1,
+    ):
+        """
+        Initializes the Prompt object with a bounding box, point, label, object ID, z-coordinate, quality score, class label,
+          and generation method.
+
+        Parameters:
+            box (numpy.ndarray): The bounding box coordinates in the format [x1, y1, x2, y2].
+            point (numpy.ndarray): The point coordinates in the format [x, y].
+            label (numpy.ndarray): The label for the point (1 for foreground, 0 for background).
+            z (int): The z-coordinate for 3D prompts.
+            confidence (float): A score representing the confidence of the prompt (For yolo prompts)
+            quality_score (float): A score representing the quality of the prompt (For yolo prompts)
+            color (int): The color the object would have in the ground truth mask (to calculate metrics).
+            channel (int): The channel of the labelmap this prompt was generated from (if applicable).
+            class_id (int): The class ID of the object (for BOB training).
+            class_label (str): The class label of the object (for human readability).
+            generated_by (str): The method used to generate the prompt.
+            obj_id (int): A unique ID for the object this prompt belongs to. Needed for multi-prompt scenarios.
+        """
+        self.box = box
+        self.point = point
+        self.label = label
+        self.z = z
+        self.confidence = confidence # Between 0 and 1, used for yolo prompts
+        self.quality_score = quality_score # Calculated from confidence and area of the bounding box
+        self.color = color
+        self.channel = channel  # The channel is for prompts generated from a labelmap - in this case color=None, otherwise channel=None
+        self.class_label = class_label
+        self.generated_by = generated_by
+        self.class_id = class_id
+        self.obj_id = obj_id  # Unique ID for the object this prompt belongs to
+
+
 def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█', printEnd = "\r"):
     """
     Call in a loop to create terminal progress bar

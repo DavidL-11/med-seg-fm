@@ -272,7 +272,7 @@ def random_point_prompt_from_gt(gt):
     )
 
 
-def random_prompts_from_binary_gt(gt, dataset, npos=1, nneg=0, neg_size=10):
+def random_prompts_from_binary_gt(gt, dataset, npos=1, nneg=0, neg_size=20):
     """
     Generates prompts from ground truth data.
     """
@@ -529,7 +529,7 @@ def multicolor_box_prompt_3d(gt, dataset, plot_prompt=False, img=None):
     )
     # Assign a unique object ID to each prompt
     for i, p in enumerate(ps):
-        p.obj_id = i
+        p.obj_id = i + 1
 
     return ps
 

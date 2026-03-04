@@ -16,7 +16,7 @@ class MedSAM2Predictor3D:
     It initializes the model and provides methods to segment images.
     """
 
-    def __init__(self, checkpoint=checkpoints.MedSAM2CT):
+    def __init__(self, checkpoint=checkpoints.MedSAM2_CT):
         self.checkpoint = checkpoint
         self.model_cfg = checkpoints.MedSAM_cfg
 

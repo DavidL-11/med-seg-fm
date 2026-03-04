@@ -45,7 +45,7 @@ class IMed361(BaseImageDataset):
         """
         super(IMed361, self).__init__(transform=transform)
         # Other path because this dataset requires a lot of space
-        self.dataset_path = "/media/david/SHARED/IMed-361M"
+        self.dataset_path = "/media/david/SSD1TB/Datasets/IMed-361M"
 
         self.split = split  # "training" or "test"
         self.plot_prompts = plot_prompts

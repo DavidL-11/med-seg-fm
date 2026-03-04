@@ -20,12 +20,12 @@ class Amos22(BaseImageDataset):
     ):
         super(Amos22, self).__init__(transform=transform)
         if split == "train":
-            self.imgs_path = "/media/david/SHARED/amos22/imagesTr/"
-            self.labels_path = "/media/david/SHARED/amos22/labelsTr/"
+            self.imgs_path = "/media/david/SSD1TB/Datasets/amos22/imagesTr/"
+            self.labels_path = "/media/david/SSD1TB/Datasets/amos22/labelsTr/"
             self.dataset_name = "Amos22_train"
         elif split == "val":
-            self.imgs_path = "/media/david/SHARED/amos22/imagesVa/"
-            self.labels_path = "/media/david/SHARED/amos22/labelsVa/"
+            self.imgs_path = "/media/david/SSD1TB/Datasets/amos22/imagesVa/"
+            self.labels_path = "/media/david/SSD1TB/Datasets/amos22/labelsVa/"
             self.dataset_name = "Amos22_test"
         else:
             raise ValueError("Mode must be 'train' or 'val'.")
@@ -71,7 +71,7 @@ class Amos22(BaseImageDataset):
             prompt = self.prompt_gen.generate_prompt(
                 img,
                 dataset=self,
-                confidence=0.75,
+                confidence=0.4,
                 iou=0.7,
                 n_prompts_per_obj=5,
                 multiprompt_z_spacing=5,

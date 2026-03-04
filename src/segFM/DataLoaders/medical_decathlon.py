@@ -63,6 +63,12 @@ class MedicalDecathlonDataset(BaseImageDataset):
                 2: "HepaticTumor",
                 255: "HepaticVessel",
             }
+            self.color_to_id = {
+                0: 0,
+                1: task_to_class_id[task],
+                2: -1,
+                255: task_to_class_id[task],
+            }
         elif self.task == "Glioma":
             self.color_to_label = {
                 0: "background",
@@ -70,6 +76,52 @@ class MedicalDecathlonDataset(BaseImageDataset):
                 2: "non-enhancing tumor",
                 3: "enhancing tumor",
                 255: "Glioma",
+            }
+        elif self.task == "Spleen":
+            self.color_to_label = {
+                0: "background",
+                1: "Spleen",
+                255: "Spleen",
+            }
+            self.color_to_id = {
+                0: 0,
+                1: task_to_class_id[task],
+                255: task_to_class_id[task],
+            }
+        elif self.task == "Heart":
+            self.color_to_label = {
+                0: "background",
+                1: "Heart",
+                255: "Heart",
+            }
+            self.color_to_id = {
+                0: 0,
+                1: task_to_class_id[task],
+                255: task_to_class_id[task],
+            }
+        elif self.task == "Prostate":
+            self.color_to_label = {
+                0: "background",
+                1: "Prostate",
+                255: "Prostate",
+            }
+            self.color_to_id = {
+                0: 0,
+                1: task_to_class_id[task],
+                255: task_to_class_id[task],
+            }
+        elif self.task == "Hippocampus":
+            self.color_to_label = {
+                0: "background",
+                1: "Hippocampus",
+                2: "Hippocampus",
+                255: "Hippocampus",
+            }
+            self.color_to_id = {
+                0: 0,
+                1: task_to_class_id[task],
+                2: task_to_class_id[task],
+                255: task_to_class_id[task],
             }
         self.id_to_label = {
             task_to_class_id[task]: task,
@@ -138,23 +190,23 @@ class MedicalDecathlonDataset(BaseImageDataset):
         Get the folder path based on the mode.
         """
         if mode == "Heart":
-            img_path = "Datasets/MedicalDecathlon/Task02_Heart/imagesTr"
-            label_path = "Datasets/MedicalDecathlon/Task02_Heart/labelsTr"
+            img_path = "/media/david/SSD1TB/Datasets/MedicalDecathlon/Task02_Heart/imagesTr"
+            label_path = "/media/david/SSD1TB/Datasets/MedicalDecathlon/Task02_Heart/labelsTr"
         elif mode == "Glioma":
-            img_path = "Datasets/MedicalDecathlon/Task01_BrainTumour/imagesTr"
-            label_path = "Datasets/MedicalDecathlon/Task01_BrainTumour/labelsTr"
+            img_path = "/media/david/SSD1TB/Datasets/MedicalDecathlon/Task01_BrainTumour/imagesTr"
+            label_path = "/media/david/SSD1TB/Datasets/MedicalDecathlon/Task01_BrainTumour/labelsTr"
         elif mode == "Spleen":
-            img_path = "Datasets/MedicalDecathlon/Task09_Spleen/imagesTr"
-            label_path = "Datasets/MedicalDecathlon/Task09_Spleen/labelsTr"
+            img_path = "/media/david/SSD1TB/Datasets/MedicalDecathlon/Task09_Spleen/imagesTr"
+            label_path = "/media/david/SSD1TB/Datasets/MedicalDecathlon/Task09_Spleen/labelsTr"
         elif mode == "Hippocampus":
-            img_path = "Datasets/MedicalDecathlon/Task04_Hippocampus/imagesTr"
-            label_path = "Datasets/MedicalDecathlon/Task04_Hippocampus/labelsTr"
+            img_path = "/media/david/SSD1TB/Datasets/MedicalDecathlon/Task04_Hippocampus/imagesTr"
+            label_path = "/media/david/SSD1TB/Datasets/MedicalDecathlon/Task04_Hippocampus/labelsTr"
         elif mode == "Prostate":
-            img_path = "Datasets/MedicalDecathlon/Task05_Prostate/imagesTr"
-            label_path = "Datasets/MedicalDecathlon/Task05_Prostate/labelsTr"
+            img_path = "/media/david/SSD1TB/Datasets/MedicalDecathlon/Task05_Prostate/imagesTr"
+            label_path = "/media/david/SSD1TB/Datasets/MedicalDecathlon/Task05_Prostate/labelsTr"
         elif mode == "HepaticVessel":
-            img_path = "Datasets/MedicalDecathlon/Task08_HepaticVessel/imagesTr"
-            label_path = "Datasets/MedicalDecathlon/Task08_HepaticVessel/labelsTr"
+            img_path = "/media/david/SSD1TB/Datasets/MedicalDecathlon/Task08_HepaticVessel/imagesTr"
+            label_path = "/media/david/SSD1TB/Datasets/MedicalDecathlon/Task08_HepaticVessel/labelsTr"
         else:
             raise ValueError("Invalid mode. Choose either 'Heart', 'Glioma', 'Spleen', 'Hippocampus', 'Prostate' or 'HepaticVessel'.")
         return img_path, label_path

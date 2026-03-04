@@ -3,7 +3,7 @@ from segFM import utils, prompts
 import json
 import napari
 import numpy as np
-
+import medvol
 class ToothFairyLabelDict(dict):
     """
     Custom dictionary for ToothFairy3 dataset labels.
@@ -44,9 +44,10 @@ class ToothFairy3(BaseImageDataset):
             tooth_only: If True, only include tooth labels in the ground truth and exclude other labels like pulp.
         """
         super(ToothFairy3, self).__init__(transform=transform)
-        self.imgs_path = "Datasets/ToothFairy3/imagesTr/"
-        self.labels_path = "Datasets/ToothFairy3/labelsTr/"
-        self.coordinates_path = "Datasets/ToothFairy3/clicks/"
+        self.imgs_path = "/media/david/SSD1TB/Datasets/ToothFairy3/imagesTr/"
+        self.labels_path = "/media/david/SSD1TB/Datasets/ToothFairy3/labelsTr/"
+        self.coordinates_path = "/media/david/SSD1TB/Datasets/ToothFairy3/clicks/"
+        self.mode = "box"
 
         self.plot_prompts = plot_prompts
 
@@ -54,7 +55,7 @@ class ToothFairy3(BaseImageDataset):
         self.n_images = len(self.images)
         self.tooth_only = tooth_only
 
-        with open("Datasets/ToothFairy3/dataset.json", "r") as f:
+        with open("/media/david/SSD1TB/Datasets/ToothFairy3/dataset.json", "r") as f:
             dataset_info = json.load(f)
 
         # Color/Label/ID translation dictionaries
@@ -85,6 +86,9 @@ class ToothFairy3(BaseImageDataset):
 
         # Load the image
         img = utils.nifti_to_numpy(self.imgs_path + img_name)
+        
+        test_img = medvol.v
+        
         gt = utils.nifti_to_numpy(self.labels_path + gt_name)
 
         if self.tooth_only:
@@ -159,9 +163,9 @@ class TertiaryToothFairy3(BaseImageDataset):
         """
         super(TertiaryToothFairy3, self).__init__(transform=transform)
         # Hardcoded paths
-        self.imgs_path = "Datasets/ToothFairy3/imagesTr/"
-        self.labels_path = "Datasets/ToothFairy3/labelsTr/"
-        self.coordinates_path = "Datasets/ToothFairy3/clicks/"
+        self.imgs_path = "/media/david/SSD1TB/Datasets/ToothFairy3/imagesTr/"
+        self.labels_path = "/media/david/SSD1TB/Datasets/ToothFairy3/labelsTr/"
+        self.coordinates_path = "/media/david/SSD1TB/Datasets/ToothFairy3/clicks/"
 
         # Arguments
         self.plot_prompts = plot_prompts
@@ -217,8 +221,8 @@ class TertiaryToothFairy3(BaseImageDataset):
         gt_name = img_name.replace("_0000.nii.gz", ".nii.gz")
 
         # Load the image
-        img = utils.nifti_to_numpy(self.imgs_path + img_name)
-        gt = utils.nifti_to_numpy(self.labels_path + gt_name)
+        img = utils.nifti_to_numpy2(self.imgs_path + img_name)
+        gt = utils.nifti_to_numpy2(self.labels_path + gt_name)
 
         # Remove labels that are not in tooth_pharynx_colors
         tp_colors = self._original_dataset.get_tooth_pharynx_colors()
@@ -227,13 +231,14 @@ class TertiaryToothFairy3(BaseImageDataset):
         if "BOB" in self.mode:
             prompt = self.prompt_gen.generate_prompt(img=img, 
                                                      dataset=self, 
-                                                     confidence=0.8,
-                                                     iou=0.7,
+                                                     confidence=0.5,
+                                                     iou=0.8,
                                                      n_prompts_per_obj=1,
-                                                     multiprompt_z_spacing = 5,
-                                                     max_z_distance=8,
+                                                     multiprompt_z_spacing = 3,
+                                                     max_z_distance=3,
                                                      plot_prompts=False,
                                                      allow_multiobject_3d=True,
+                                                     max_det=20,
                                                      allowed_classes=[13, 18])
         else:
             prompt = prompts.multicolor_box_prompt_3d(gt, dataset=self._original_dataset, plot_prompt=self.plot_prompts)

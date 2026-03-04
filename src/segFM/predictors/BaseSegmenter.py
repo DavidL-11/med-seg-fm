@@ -61,6 +61,10 @@ class BaseSegmenter:
             }
 
             segmasks, scores, total_prompts = self.segment_image_multiprompt(image, prompts)
+            
+            if segmasks is None:
+                logger.warning(f"No segmentation masks were returned for image {data['name']}, skipping...")
+                continue
 
             # Enumerate over all prompts generated
             for i, prompt in enumerate(total_prompts):

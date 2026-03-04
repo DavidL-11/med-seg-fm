@@ -19,8 +19,8 @@ class Flare22(BaseImageDataset):
             transform: Optional transformations to apply to the images and masks.
         """
         super(Flare22, self).__init__(transform=transform)
-        self.imgs_path = "/media/david/SHARED/FLARE22Train/images/"
-        self.labels_path = "/media/david/SHARED/FLARE22Train/labels/"
+        self.imgs_path = "/media/david/SSD1TB/Datasets/FLARE22Train/images/"
+        self.labels_path = "/media/david/SSD1TB/Datasets/FLARE22Train/labels/"
         self.n_images = 49
         self.plot_prompts = plot_prompts
         self.prompt_gen = bob
@@ -61,9 +61,9 @@ class Flare22(BaseImageDataset):
             prompt = self.prompt_gen.generate_prompt(
                 img, 
                 dataset=self, 
-                confidence=0.5,
+                confidence=0.75,
                 max_det=13,
-                n_prompts_per_obj=5,
+                n_prompts_per_obj=1,
                 multiprompt_z_spacing=15,
                 max_z_distance=30,
                 allow_multiobject_3d=False,

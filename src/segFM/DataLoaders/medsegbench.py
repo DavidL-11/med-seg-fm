@@ -45,7 +45,7 @@ class MedSegBench(BaseImageDataset):
 
         # Constants
         self.info = INFO
-        self.folder_path = f"/media/david/SHARED/MedSegBench/{size}/"
+        self.folder_path = f"/media/david/SSD1TB/Datasets/MedSegBench/{size}/"
 
         # Initialize the sub-dataset and get image list
         self.npz_files = self.get_img_list(self.folder_path, ".npz")

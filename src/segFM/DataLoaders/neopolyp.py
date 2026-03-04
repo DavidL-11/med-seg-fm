@@ -28,12 +28,11 @@ class NeopolypDataset(BaseImageDataset):
         self.dataset_name = "NEOPOLYP"
 
         if split == "train":
-            self.image_path = "Datasets/bkai-igh-neopolyp/train/train/"
-            self.mask_path = "Datasets/bkai-igh-neopolyp/train_gt/train_gt/"
+            self.image_path = "/media/david/SSD1TB/Datasets/bkai-igh-neopolyp/train/train/"
+            self.mask_path = "/media/david/SSD1TB/Datasets/bkai-igh-neopolyp/train_gt/train_gt/"
         else:
-            self.image_path = "Datasets/bkai-igh-neopolyp/bob_test/"
-            self.mask_path = "Datasets/bkai-igh-neopolyp/bob_test_gt/"
-
+            self.image_path = "/media/david/SSD1TB/Datasets/bkai-igh-neopolyp/bob_test/"
+            self.mask_path = "/media/david/SSD1TB/Datasets/bkai-igh-neopolyp/bob_test_gt/"
         self.bbsize = bbsize
         self.mode = mode
         self.prompt_finder = prompt_finder

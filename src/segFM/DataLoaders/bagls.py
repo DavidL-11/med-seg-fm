@@ -125,7 +125,7 @@ class BAGLSImagesFull(BaseImageDataset):
         prompt_gen=None,
     ):
         super(BAGLSImagesFull, self).__init__(transform=transform)
-        self.path = "/run/media/david/SSD1TB/Datasets/BAGLS_full/"
+        self.path = "/media/david/SSD1TB/Datasets/BAGLS_full/"
         self.dataset_name = "BAGLSImagesFull"
         self.img_path = self.path + "images/"
         self.gt_path = self.path + "masks/"

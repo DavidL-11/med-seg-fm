@@ -50,6 +50,17 @@ dependencies: torch_auto
 	.venv/bin/pip install -e src/segFM/predictors/surface-distance
 	.venv_med/bin/pip install -e src/segFM/predictors/surface-distance
 
+	# Install sam2 in .venv
+	.venv/bin/pip install -e src/segFM/predictors/sam2
+	# Install MedSAM2 in .venv_med
+	.venv_med/bin/pip install -e src/segFM/predictors/MedSAM2
+	# Download the checkpoints src/segFM/predictors/MedSAM2/download.sh
+	chmod +x src/segFM/predictors/MedSAM2/download.sh
+	cd src/segFM/predictors/MedSAM2 && ./download.sh
+	# Download SAM2 checkpoints src/segFM/predictors/sam2/checkpoints/download_ckpts.sh
+	chmod +x src/segFM/predictors/sam2/checkpoints/download_ckpts.sh
+	cd src/segFM/predictors/sam2/checkpoints && ./download_ckpts.sh
+
 clean:
 	@echo "Cleaning up virtual environments..."
 	rm -rf .venv .venv_med

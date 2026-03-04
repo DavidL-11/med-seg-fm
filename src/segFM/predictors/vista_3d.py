@@ -1,6 +1,5 @@
 import numpy as np
 import copy, os
-import napari, vedo
 import torch
 import pandas as pd
 import time
@@ -26,7 +25,7 @@ class VISTA3DPredictor:
         self.inferer = InferClass(config_file=config_file)
         self.mode = mode
 
-    def segment_image(self, data, dataset) -> tuple[dict, np.ndarray, np.ndarray]:
+    def segment_image(self, data: dict, dataset) -> tuple[dict, np.ndarray, np.ndarray]:
         """
         Segment the image using the VISTA3D model.
         Args:
@@ -34,10 +33,7 @@ class VISTA3DPredictor:
             label_prompt (bool): If True, don't use a generated prompt, but a label prompt (e.g. 1 for liver).
         """
         # Load the image
-        image, gt, prompts = data["img"], data["gt"], data["prompts"]
-
-        # Image is in (z, y, x, rgb)
-        depth, height, width = image.shape
+        gt, prompts = data["gt"], data["prompts"]
 
         # Create an empty array to store the segmentation results
         metrics = pd.DataFrame(columns=["Image", "Object", "DSC", "IoU", "NSD", "Time"])
@@ -49,6 +45,8 @@ class VISTA3DPredictor:
         start_time = time.time()
         
         with torch.inference_mode(), torch.autocast("cuda", dtype=torch.bfloat16):
+            # Print device
+            print(f"Using device: {self.inferer.device}")
             for i, prompt in enumerate(prompts):
                 self.inferer.clear_cache()  # Clear cache for each prompt
                 logger.info(f"Processing prompt {i + 1}/{len(prompts)}: {prompt.class_label}")
