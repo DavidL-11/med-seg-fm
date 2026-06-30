@@ -1,0 +1,70 @@
+cff-version: 1.2.0
+title: >-
+  GitHub Repository for Foundation Models in Medical Image
+  Segmentation
+message: 'If you use this software, please cite it as below.'
+type: software
+authors:
+  - family-names: Lurz
+    given-names: David
+    orcid: 'https://orcid.org/0009-0003-6526-5464'
+  - family-names: Neubig
+    given-names: Luisa
+    orcid: 'https://orcid.org/0000-0001-5202-7158'
+  - family-names: Kopp
+    given-names: Markus
+  - family-names: Kist
+    given-names: Andreas
+    orcid: 'https://orcid.org/0000-0003-3643-7776'
+identifiers:
+  - type: doi
+    value: 10.1007/978-3-658-51100-5_8
+    description: Paper DOI
+repository-code: 'https://github.com/DavidL-11/med-seg-fm'
+abstract: >-
+  Task-constrained deep learning models have shown strong
+  performance for medical image segmentation. Recently,
+  generalist segmentation foundation models have emerged,
+  showing promising results across different scenarios.
+  However, we lack large-scale studies comparing the
+  performance of 2D image, video, and volume segmentation
+  across multiple models and modalities. To unmask how
+  foundational the models truly are, we comprehensively
+  evaluate the segmentation performance of SAM2.1, SAM3,
+  MedSAM2, SAM-Med2D, SAM-Med3D, nnInteractive and VISTA3D
+  on more than 80 medical datasets. MedSAM2stands out as the
+  most foundational of all models, while SAM-Med3D and
+  VISTA3D excel in 3D CT segmentation scenarios, but require
+  noticeably more computational power and memory.
+  nnInteractive seems to be a promising model, featuring
+  very fast inference time and rather high segmentation
+  performance. Our code and evaluation results are openly
+  available at https://github.com/DavidL-11/med-seg-fm.
+date-released: '2026-03-12'
+preferred-citation:
+  authors:
+    - family-names: Lurz
+      given-names: David
+      orcid: 'https://orcid.org/0009-0003-6526-5464'
+    - family-names: Neubig
+      given-names: Luisa
+      orcid: 'https://orcid.org/0000-0001-5202-7158'
+    - family-names: Kopp
+      given-names: Markus
+    - family-names: Kist
+      given-names: Andreas
+      orcid: 'https://orcid.org/0000-0003-3643-7776'
+  title: >-
+    Foundation Models in Medical Image Segmentation
+  date-released: '2026-03-12'
+  type: conference-paper
+  pages: 40--47
+  year: '2026'
+  isbn: 978-3-658-51100-5
+  collection-title: Bildverarbeitung für die Medizin 2026
+  conference:
+    name: Bildverarbeitung für die Medizin 2026
+    location: 'Lübeck, Germany'
+  publisher:
+    name: Springer Fachmedien Wiesbaden
+    address: Wiesbaden

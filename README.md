@@ -1,5 +1,20 @@
 ## Foundation Models in Medical Image Segmentation
-The goal of this repository is to evaluate the performance of different foundation models on many different, especially medical, datasets and compare them to each other and to fully supervised models trained specifically for a certain dataset.
+
+Department Artificial Intelligence in Biomedical Imaging (AIBE), University of Erlangen-Nürnberg (FAU), Germany
+
+[David Lurz*](https://scholar.google.com/citations?user=u-vpuvwAAAAJ&hl=en)
+[Luisa Neubig*](https://scholar.google.com/citations?user=MaIlWfYAAAAJ&hl=en)
+[Markus Kopp°](https://www.researchgate.net/scientific-contributions/Markus-Kopp-2176186426)
+[Andreas Kist*](https://scholar.google.com/citations?user=H8h7A44AAAAJ&hl=en)
+
+\* Anki Lab @ AIBE FAU; ° University Hospital Erlangen
+
+[[`Paper`](https://doi.org/10.1007/978-3-658-51100-5_8)]
+[[`BibTeX`](#bibtex)]
+[[`Anki Lab`](https://anki.xyz/)]
+
+The goal of this repository is to evaluate the performance of different interactive segmentation foundation models on many medical datasets (including 2D, 3D, and video datasets across various modalities); and compare them to each other and to fully supervised models trained specifically for a certain dataset. The results can be seen in our [paper](https://doi.org/10.1007/978-3-658-51100-5_8) and the code is available here. To further reduce the amount of manual work required for segmentation, our other work, [BOB](https://github.com/DavidL-11/BOB), can then automatically suggest box prompts for these models which the user only needs to check and refine.
+
 
 ### Installation
 For ease of use, a Makefile is included that creates virtual environments and installs the required packages.
@@ -135,6 +150,35 @@ The training evaluation data was sourced from the following datasets and collect
 - [Medical Decathlon](http://medicaldecathlon.com/)
 
 
+## Citations
+### BibTeX
+If you use this code or our results in your research, please cite the following paper:
+
+```BibTeX
+@InProceedings{10.1007/978-3-658-51100-5_8,
+author="Lurz, David
+and Neubig, Luisa
+and Kopp, Markus
+and Kist, Andreas",
+editor="Handels, Heinz
+and Breininger, Katharina
+and Deserno, Thomas
+and Maier, Andreas
+and Maier-Hein, Klaus
+and Palm, Christoph
+and Tolxdorff, Thomas",
+title="Foundation Models in Medical Image Segmentation",
+booktitle="Bildverarbeitung f{\"u}r die Medizin 2026",
+year="2026",
+publisher="Springer Fachmedien Wiesbaden",
+address="Wiesbaden",
+pages="40--47",
+abstract="Task-constrained deep learning models have shown strong performance for medical image segmentation. Recently, generalist segmentation foundation models have emerged, showing promising results across different scenarios. However, we lack large-scale studies comparing the performance of 2D image, video, and volume segmentation across multiple models and modalities. To unmask how foundational the models truly are, we comprehensively evaluate the segmentation performance of SAM2.1, SAM3, MedSAM2, SAM-Med2D, SAM-Med3D, nnInteractive and VISTA3D on more than 80 medical datasets. MedSAM2stands out as the most foundational of all models, while SAM-Med3D and VISTA3D excel in 3D CT segmentation scenarios, but require noticeably more computational power and memory. nnInteractive seems to be a promising model, featuring very fast inference time and rather high segmentation performance. Our code and evaluation results are openly available at https://github.com/DavidL-11/med-seg-fm.",
+isbn="978-3-658-51100-5"
+}
+```
+
+### Bibliography
 The following list of citations contains publications related to our work:
 
 
