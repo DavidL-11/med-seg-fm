@@ -2,9 +2,9 @@
 
 Department Artificial Intelligence in Biomedical Imaging (AIBE), University of Erlangen-Nürnberg (FAU), Germany
 
-[David Lurz*](https://scholar.google.com/citations?user=u-vpuvwAAAAJ&hl=en)
-[Luisa Neubig*](https://scholar.google.com/citations?user=MaIlWfYAAAAJ&hl=en)
-[Markus Kopp°](https://www.researchgate.net/scientific-contributions/Markus-Kopp-2176186426)
+[David Lurz*](https://scholar.google.com/citations?user=u-vpuvwAAAAJ&hl=en),
+[Luisa Neubig*](https://scholar.google.com/citations?user=MaIlWfYAAAAJ&hl=en),
+[Markus Kopp°](https://www.researchgate.net/scientific-contributions/Markus-Kopp-2176186426),
 [Andreas Kist*](https://scholar.google.com/citations?user=H8h7A44AAAAJ&hl=en)
 
 \* Anki Lab @ AIBE FAU; ° University Hospital Erlangen
